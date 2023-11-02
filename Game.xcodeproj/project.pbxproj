@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1C6A2312AEBBC0A006CED3A /* add_sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C6A22F2AEBBC0A006CED3A /* add_sound.cpp */; };
+		F1C6A2342AEC3AA2006CED3A /* Sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C6A2322AEC3AA2006CED3A /* Sound.cpp */; };
 		F1F799A42AE736BB0015DA81 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1F799A32AE736BB0015DA81 /* main.cpp */; };
+		F1F799AF2AE736D80015DA81 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */; };
+		F1F799B02AE736D80015DA81 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AC2AE736D80015DA81 /* SDL2_image.framework */; };
+		F1F799B12AE736D80015DA81 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AD2AE736D80015DA81 /* SDL2_mixer.framework */; };
+		F1F799B22AE736D80015DA81 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AE2AE736D80015DA81 /* SDL2.framework */; };
+		F1F799BE2AE91AE90015DA81 /* death.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1F799BC2AE91AE90015DA81 /* death.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F1C6A22F2AEBBC0A006CED3A /* add_sound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = add_sound.cpp; sourceTree = "<group>"; };
+		F1C6A2302AEBBC0A006CED3A /* add_sound.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = add_sound.hpp; sourceTree = "<group>"; };
+		F1C6A2322AEC3AA2006CED3A /* Sound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sound.cpp; sourceTree = "<group>"; };
+		F1C6A2332AEC3AA2006CED3A /* Sound.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sound.hpp; sourceTree = "<group>"; };
 		F1F799A02AE736BB0015DA81 /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F799A32AE736BB0015DA81 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		F1F799AC2AE736D80015DA81 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		F1F799AD2AE736D80015DA81 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		F1F799AE2AE736D80015DA81 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		F1F799BC2AE91AE90015DA81 /* death.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = death.cpp; sourceTree = "<group>"; };
+		F1F799BD2AE91AE90015DA81 /* death.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = death.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F799AF2AE736D80015DA81 /* SDL2_ttf.framework in Frameworks */,
+				F1F799B02AE736D80015DA81 /* SDL2_image.framework in Frameworks */,
+				F1F799B12AE736D80015DA81 /* SDL2_mixer.framework in Frameworks */,
+				F1F799B22AE736D80015DA81 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +64,7 @@
 			children = (
 				F1F799A22AE736BB0015DA81 /* Game */,
 				F1F799A12AE736BB0015DA81 /* Products */,
+				F1F799AA2AE736D80015DA81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +80,25 @@
 			isa = PBXGroup;
 			children = (
 				F1F799A32AE736BB0015DA81 /* main.cpp */,
+				F1F799BC2AE91AE90015DA81 /* death.cpp */,
+				F1F799BD2AE91AE90015DA81 /* death.hpp */,
+				F1C6A22F2AEBBC0A006CED3A /* add_sound.cpp */,
+				F1C6A2302AEBBC0A006CED3A /* add_sound.hpp */,
+				F1C6A2322AEC3AA2006CED3A /* Sound.cpp */,
+				F1C6A2332AEC3AA2006CED3A /* Sound.hpp */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		F1F799AA2AE736D80015DA81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1F799AC2AE736D80015DA81 /* SDL2_image.framework */,
+				F1F799AD2AE736D80015DA81 /* SDL2_mixer.framework */,
+				F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */,
+				F1F799AE2AE736D80015DA81 /* SDL2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C6A2312AEBBC0A006CED3A /* add_sound.cpp in Sources */,
+				F1F799BE2AE91AE90015DA81 /* death.cpp in Sources */,
 				F1F799A42AE736BB0015DA81 /* main.cpp in Sources */,
+				F1C6A2342AEC3AA2006CED3A /* Sound.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +281,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

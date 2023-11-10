@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F1C6A2312AEBBC0A006CED3A /* add_sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C6A22F2AEBBC0A006CED3A /* add_sound.cpp */; };
 		F1C6A2342AEC3AA2006CED3A /* Sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C6A2322AEC3AA2006CED3A /* Sound.cpp */; };
+		F1C6A2622AFDD3A9006CED3A /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C6A2602AFDD3A9006CED3A /* game.cpp */; };
 		F1F799A42AE736BB0015DA81 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1F799A32AE736BB0015DA81 /* main.cpp */; };
 		F1F799AF2AE736D80015DA81 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */; };
 		F1F799B02AE736D80015DA81 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AC2AE736D80015DA81 /* SDL2_image.framework */; };
@@ -34,6 +35,8 @@
 		F1C6A2302AEBBC0A006CED3A /* add_sound.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = add_sound.hpp; sourceTree = "<group>"; };
 		F1C6A2322AEC3AA2006CED3A /* Sound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sound.cpp; sourceTree = "<group>"; };
 		F1C6A2332AEC3AA2006CED3A /* Sound.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sound.hpp; sourceTree = "<group>"; };
+		F1C6A2602AFDD3A9006CED3A /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		F1C6A2612AFDD3A9006CED3A /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
 		F1F799A02AE736BB0015DA81 /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F799A32AE736BB0015DA81 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				F1C6A2302AEBBC0A006CED3A /* add_sound.hpp */,
 				F1C6A2322AEC3AA2006CED3A /* Sound.cpp */,
 				F1C6A2332AEC3AA2006CED3A /* Sound.hpp */,
+				F1C6A2602AFDD3A9006CED3A /* game.cpp */,
+				F1C6A2612AFDD3A9006CED3A /* game.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				F1C6A2312AEBBC0A006CED3A /* add_sound.cpp in Sources */,
 				F1F799BE2AE91AE90015DA81 /* death.cpp in Sources */,
 				F1F799A42AE736BB0015DA81 /* main.cpp in Sources */,
+				F1C6A2622AFDD3A9006CED3A /* game.cpp in Sources */,
 				F1C6A2342AEC3AA2006CED3A /* Sound.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

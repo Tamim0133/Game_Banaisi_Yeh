@@ -14,6 +14,7 @@
 		F1C7A4002AFDD7AF00B58DFA /* Renderer_Create.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7A3FD2AFDD7AF00B58DFA /* Renderer_Create.cpp */; };
 		F1C7A4032AFDD93F00B58DFA /* Play_Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7A4012AFDD93F00B58DFA /* Play_Music.cpp */; };
 		F1C7A4062AFDF46400B58DFA /* Texture_Create.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7A4042AFDF46400B58DFA /* Texture_Create.cpp */; };
+		F1C7A4092B02623100B58DFA /* FrontPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7A4072B02623100B58DFA /* FrontPage.cpp */; };
 		F1F799A42AE736BB0015DA81 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1F799A32AE736BB0015DA81 /* main.cpp */; };
 		F1F799AF2AE736D80015DA81 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */; };
 		F1F799B02AE736D80015DA81 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AC2AE736D80015DA81 /* SDL2_image.framework */; };
@@ -49,6 +50,8 @@
 		F1C7A4022AFDD93F00B58DFA /* Play_Music.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Play_Music.hpp; sourceTree = "<group>"; };
 		F1C7A4042AFDF46400B58DFA /* Texture_Create.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texture_Create.cpp; sourceTree = "<group>"; };
 		F1C7A4052AFDF46400B58DFA /* Texture_Create.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Texture_Create.hpp; sourceTree = "<group>"; };
+		F1C7A4072B02623100B58DFA /* FrontPage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrontPage.cpp; sourceTree = "<group>"; };
+		F1C7A4082B02623100B58DFA /* FrontPage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrontPage.hpp; sourceTree = "<group>"; };
 		F1F799A02AE736BB0015DA81 /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F799A32AE736BB0015DA81 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
@@ -95,22 +98,24 @@
 			isa = PBXGroup;
 			children = (
 				F1F799A32AE736BB0015DA81 /* main.cpp */,
-				F1C6A2602AFDD3A9006CED3A /* game.cpp */,
+				F1C7A4082B02623100B58DFA /* FrontPage.hpp */,
+				F1C7A4072B02623100B58DFA /* FrontPage.cpp */,
 				F1C6A2612AFDD3A9006CED3A /* game.hpp */,
+				F1C6A2602AFDD3A9006CED3A /* game.cpp */,
 				F1F799BD2AE91AE90015DA81 /* death.hpp */,
 				F1F799BC2AE91AE90015DA81 /* death.cpp */,
-				F1C6A2322AEC3AA2006CED3A /* Sound.cpp */,
 				F1C6A2332AEC3AA2006CED3A /* Sound.hpp */,
-				F1C7A3FD2AFDD7AF00B58DFA /* Renderer_Create.cpp */,
+				F1C6A2322AEC3AA2006CED3A /* Sound.cpp */,
 				F1C7A3FE2AFDD7AF00B58DFA /* Renderer_Create.hpp */,
-				F1C7A3FB2AFDD7AF00B58DFA /* Window_Create.cpp */,
+				F1C7A3FD2AFDD7AF00B58DFA /* Renderer_Create.cpp */,
 				F1C7A3FC2AFDD7AF00B58DFA /* Window_Create.hpp */,
-				F1C6A22F2AEBBC0A006CED3A /* add_sound.cpp */,
+				F1C7A3FB2AFDD7AF00B58DFA /* Window_Create.cpp */,
 				F1C6A2302AEBBC0A006CED3A /* add_sound.hpp */,
+				F1C6A22F2AEBBC0A006CED3A /* add_sound.cpp */,
 				F1C7A4022AFDD93F00B58DFA /* Play_Music.hpp */,
 				F1C7A4012AFDD93F00B58DFA /* Play_Music.cpp */,
-				F1C7A4042AFDF46400B58DFA /* Texture_Create.cpp */,
 				F1C7A4052AFDF46400B58DFA /* Texture_Create.hpp */,
+				F1C7A4042AFDF46400B58DFA /* Texture_Create.cpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				F1C7A4032AFDD93F00B58DFA /* Play_Music.cpp in Sources */,
 				F1C6A2342AEC3AA2006CED3A /* Sound.cpp in Sources */,
 				F1C7A4062AFDF46400B58DFA /* Texture_Create.cpp in Sources */,
+				F1C7A4092B02623100B58DFA /* FrontPage.cpp in Sources */,
 				F1C7A3FF2AFDD7AF00B58DFA /* Window_Create.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

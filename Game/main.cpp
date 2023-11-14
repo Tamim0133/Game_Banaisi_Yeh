@@ -6,10 +6,13 @@
 #include "death.hpp"
 #include "Sound.hpp"
 #include "game.hpp"
+#include "FrontPage.hpp"
+
 using namespace std;
 
 int main(int argc, char ** argv)
 {
+    FrontPage f;
     Game g;
    
     return 0;

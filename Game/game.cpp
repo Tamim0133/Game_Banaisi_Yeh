@@ -9,6 +9,7 @@
 
 
 Game:: Game(){
+   
     Init();
     
     FPS = 90;
@@ -21,6 +22,7 @@ Game:: Game(){
     game_has_just_began = true;
     mana_constant = 0;
     jumpstate = 0;
+    
     N1 = (rand() % 2) + 1;
     N2 = (rand() % 3) + 1;
     random_of_hundred = (rand() % 300);
@@ -30,6 +32,9 @@ Game:: Game(){
     renderer = r.Create_Renderer(window);
 
     Create_game_textures();
+    
+    SDL_ShowWindow(window);
+    SDL_RaiseWindow(window);
       
     while (!quit)
       {
@@ -38,8 +43,14 @@ Game:: Game(){
 
           while (SDL_PollEvent(&event) != 0)
           {
+              if(event.type == SDL_WINDOWEVENT
+                 && event.window.event == SDL_WINDOWEVENT_CLOSE)
+                  {
+                      quit = true;break;
+                  }
               switch (event.type)
               {
+                     
                   case SDL_QUIT: quit = true; break;
                   case SDL_KEYDOWN:
                           switch (event.key.keysym.sym)
@@ -59,11 +70,11 @@ Game:: Game(){
               
           }
 
-          SDL_RenderClear(renderer);
+          SDL_RenderClear(renderer);//Clear the current rendering
           
           Move_everything();
           
-          SDL_RenderCopy(renderer, mountains, NULL, &mountain1);
+          SDL_RenderCopy(renderer, mountains, NULL, &mountain1); // Bg Image
           SDL_RenderCopy(renderer, mountains, NULL, &mountain2);
 
           
@@ -91,7 +102,7 @@ Game:: Game(){
       
           Show_point();
 
-          SDL_RenderPresent(renderer);
+          SDL_RenderPresent(renderer);//Update the screen with any rendering 
           
           FrameTime = SDL_GetTicks() - Framestart;
           if(frameDelay > FrameTime)// frame delay = 1000/fps ; current frame time kom hole
@@ -110,7 +121,6 @@ Game:: Game(){
   
 }
 
-
 void Game:: Init(){
         if( Mix_OpenAudio( 44100, MIX_DEFAULT_FORMAT, 2, 2048 ) < 0 )
         {
@@ -122,17 +132,6 @@ void Game:: Init(){
         SDL_Init(SDL_INIT_AUDIO);
     
 
-}
-
-void Game :: Render_Coins(){
-    int no_of_coin = (SDL_GetTicks() / 100) % 8;
-
-    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_01);
-    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_02);
-    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_03);
-    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_04);
-    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_05);
-    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_06);
 }
 
 void Game:: Create_game_textures(){
@@ -214,6 +213,17 @@ void Game :: Move_everything(){
     mana_potion.x--;
     if(mana_potion.x < -10) {mana_potion.x += 3000; }
     
+}
+
+void Game :: Render_Coins(){
+    int no_of_coin = (SDL_GetTicks() / 100) % 8;
+
+    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_01);
+    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_02);
+    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_03);
+    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_04);
+    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_05);
+    SDL_RenderCopy(renderer, coin[no_of_coin], NULL, &coin_06);
 }
 
 void Game:: Detect_collision(){

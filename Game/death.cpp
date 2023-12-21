@@ -11,14 +11,12 @@ void Death:: present_window(char text[])
 {
 
     SDL_Init(SDL_INIT_VIDEO);
-    TTF_Init();
+    TTF_Init(); // Font init
     
-    if(font == NULL){
-        cout << "font ins NULL" << endl;
-    }
+    play = true;
     
     font = TTF_OpenFont("assets/fonts/terminal_font.ttf", 40);
-    color  = { 0, 0, 0 };
+    color  = { 0, 0, 0 }; // black
     
     death_win = w.create_window("Death", 380, 360);
     death_ren = r.Create_Renderer(death_win);
@@ -41,12 +39,14 @@ void Death:: present_window(char text[])
     SDL_Rect fontDstRect = { 100,280, texW, texH };
   
     SDL_Event e;
+    
     SDL_ShowWindow(death_win);
     SDL_RaiseWindow(death_win);
+    
     SDL_SetRenderDrawColor(death_ren, 255, 99, 71, 0.5);
     
     
-    while( play)
+    while(play)
     {
         while (SDL_PollEvent(&e))
         {
@@ -75,7 +75,6 @@ void Death:: present_window(char text[])
         SDL_RenderCopy(death_ren, death_txt, NULL, &death_rect);
         SDL_RenderCopy(death_ren, got_hit_txt, NULL, &got_hit_rect);
         SDL_RenderCopy(death_ren, fontTexture, NULL, &fontDstRect);
-            
 
         SDL_RenderPresent(death_ren);
     }

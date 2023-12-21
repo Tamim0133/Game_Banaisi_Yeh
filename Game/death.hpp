@@ -47,7 +47,7 @@ struct Death{
     TTF_Font * font ;
     SDL_Color color ;
    
-    bool play = true;
+    bool play;
     char text[10];
     
     Window_Create w;

@@ -235,7 +235,7 @@ void Game:: Detect_collision(){
     SDL_Rect rock_monster_rect = {rock_monster_01.x , rock_monster_01.y + rock_monster_01.h/2 , rock_monster_01.w/2 ,rock_monster_01.h/3};
 
     
-    SDL_bool  collision_hero_enemy_01 = SDL_HasIntersection(&hero_rect, &enemy_01_rect);
+    SDL_bool collision_hero_enemy_01 = SDL_HasIntersection(&hero_rect, &enemy_01_rect);
     SDL_bool collision_hero_enemy_03 = SDL_HasIntersection(&hero_rect, &enemy_03_rect);
     SDL_bool collision_hero_mana_potion = SDL_HasIntersection(&hero_rect, &mana_potion_rect);
     SDL_bool collision_with_rock_monster = SDL_HasIntersection(&hero_rect, &rock_monster_rect);

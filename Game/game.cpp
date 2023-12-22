@@ -15,6 +15,8 @@ Game:: Game(){
     FPS = 90;
     frameDelay = (1000 / FPS); // Time per frame
     
+    character_no = 5;
+    
     quit = false;
     point_count = 0;
     super_saiyan_has_started_from = 0;
@@ -35,6 +37,8 @@ Game:: Game(){
     
     SDL_ShowWindow(window);
     SDL_RaiseWindow(window);
+    
+
       
     while (!quit)
       {
@@ -177,18 +181,87 @@ void Game:: Create_game_textures(){
     ssj_txt = t.Create_tex("sprite/idle/aura.png", renderer);
     
     mountains = t.Create_tex("assets/bg_2.png", renderer);
-
-    running[0] = t.Create_tex("sprite/running/frame-1.png", renderer);
-    running[1] = t.Create_tex("sprite/running/frame-2.png", renderer);
-    running[2] = t.Create_tex("sprite/running/frame-3.png", renderer);
-    running[3] = t.Create_tex("sprite/running/frame-4.png", renderer);
-    running[4] = t.Create_tex("sprite/running/frame-5.png", renderer);
-    running[5] = t.Create_tex("sprite/running/frame-6.png", renderer);
     
-    jump_up[0] = t.Create_tex("sprite/standing/frame-1.png", renderer);
-    jump_up[1] = t.Create_tex("sprite/jump/jump_up.png", renderer);
+    // character 0ne
+    //----------------------------------------------------------------
 
-    jumo_fall_txt = t.Create_tex("sprite/jump/jump_fall.png", renderer);
+    if(character_no == 1){
+        running[0] = t.Create_tex("sprite/running/frame-1.png", renderer);
+        running[1] = t.Create_tex("sprite/running/frame-2.png", renderer);
+        running[2] = t.Create_tex("sprite/running/frame-3.png", renderer);
+        running[3] = t.Create_tex("sprite/running/frame-4.png", renderer);
+        running[4] = t.Create_tex("sprite/running/frame-5.png", renderer);
+        running[5] = t.Create_tex("sprite/running/frame-6.png", renderer);
+        
+        jump_up[0] = t.Create_tex("sprite/standing/frame-1.png", renderer);
+        jump_up[1] = t.Create_tex("sprite/jump/jump_up.png", renderer);
+
+        jumo_fall_txt = t.Create_tex("sprite/jump/jump_fall.png", renderer);
+    }
+    
+    //----------------------------------------------------------------
+    
+    
+    
+    // character two
+    //----------------------------------------------------------------
+
+    if(character_no == 2){
+        running[0] = t.Create_tex("sprite/Character2/running/frame-1.png", renderer);
+        running[1] = t.Create_tex("sprite/Character2/running/frame-2.png", renderer);
+        running[2] = t.Create_tex("sprite/Character2/running/frame-3.png", renderer);
+        running[3] = t.Create_tex("sprite/Character2/running/frame-4.png", renderer);
+        running[4] = t.Create_tex("sprite/Character2/running/frame5.png", renderer);
+        running[5] = t.Create_tex("sprite/Character2/running/frame-6.png", renderer);
+        
+        jump_up[0] = t.Create_tex("sprite/Character2/Idle/frame-1.png", renderer);
+        jump_up[1] = t.Create_tex("sprite/Character2/Jump/Jump-up.png", renderer);
+        jumo_fall_txt = t.Create_tex("sprite/Character2/Jump/Jump-fall.png", renderer);
+    }
+    
+    //----------------------------------------------------------------
+    
+    
+    // character three
+    //----------------------------------------------------------------
+
+    if(character_no == 3){
+        running[0] = t.Create_tex("sprite/Character3/running/frame-1.png", renderer);
+        running[1] = t.Create_tex("sprite/Character3/running/frame-2.png", renderer);
+        running[2] = t.Create_tex("sprite/Character3/running/frame-3.png", renderer);
+        running[3] = t.Create_tex("sprite/Character3/running/frame-4.png", renderer);
+        running[4] = t.Create_tex("sprite/Character3/running/frame-5.png", renderer);
+        running[5] = t.Create_tex("sprite/Character3/running/frame-1.png", renderer);
+        
+        jump_up[0] = t.Create_tex("sprite/Character3/Idle/frame-1.png", renderer);
+        jump_up[1] = t.Create_tex("sprite/Character3/Jump/jump-up.png", renderer);
+        jumo_fall_txt = t.Create_tex("sprite/Character3/Jump/jump-fall.png", renderer);
+    }
+    
+    //----------------------------------------------------------------
+    
+    // character four
+    //----------------------------------------------------------------
+
+    if(character_no == 4){
+        running[0] = t.Create_tex("sprite/Character4/idle/frame-1.png", renderer);
+        running[1] = t.Create_tex("sprite/Character4/running/frame-1.png", renderer);
+        running[2] = t.Create_tex("sprite/Character4/running/frame-2.png", renderer);
+        running[3] = t.Create_tex("sprite/Character4/running/frame-3.png", renderer);
+        running[4] = t.Create_tex("sprite/Character4/running/frame-4.png", renderer);
+        running[5] = t.Create_tex("sprite/Character4/sliding/frame.png", renderer);
+        
+        jump_up[0] = t.Create_tex("sprite/Character4/idle/frame-2.png", renderer);
+        jump_up[1] = t.Create_tex("sprite/Character4/jump_up/frame.png", renderer);
+        jumo_fall_txt = t.Create_tex("sprite/Character4/jump_fall/frame.png", renderer);
+    }
+    
+    //----------------------------------------------------------------
+    
+    
+    
+    
+    
     
     enemy[0] = t.Create_tex("sprite/enemy/idle/frame-1.png", renderer);
     enemy[1] = t.Create_tex("sprite/enemy/idle/frame-2.png", renderer);

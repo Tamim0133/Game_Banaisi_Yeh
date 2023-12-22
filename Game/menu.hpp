@@ -20,6 +20,7 @@
 #include "Credits.hpp"
 #include "Tutorial.hpp"
 #include "High_scores.hpp"
+#include "Character_choose.hpp"
 struct Menu{
     
 public:

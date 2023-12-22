@@ -22,6 +22,7 @@
 		F1C7CF692B35815200A9F29B /* Credits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7CF672B35815200A9F29B /* Credits.cpp */; };
 		F1C7CF6C2B359F4E00A9F29B /* Tutorial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7CF6A2B359F4E00A9F29B /* Tutorial.cpp */; };
 		F1C7CF6F2B35A57E00A9F29B /* High_scores.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7CF6D2B35A57E00A9F29B /* High_scores.cpp */; };
+		F1C7CF752B36083100A9F29B /* Character_choose.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C7CF732B36083100A9F29B /* Character_choose.cpp */; };
 		F1F799A42AE736BB0015DA81 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1F799A32AE736BB0015DA81 /* main.cpp */; };
 		F1F799AF2AE736D80015DA81 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */; };
 		F1F799B02AE736D80015DA81 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F799AC2AE736D80015DA81 /* SDL2_image.framework */; };
@@ -75,6 +76,8 @@
 		F1C7CF6D2B35A57E00A9F29B /* High_scores.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = High_scores.cpp; sourceTree = "<group>"; };
 		F1C7CF6E2B35A57E00A9F29B /* High_scores.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = High_scores.hpp; sourceTree = "<group>"; };
 		F1C7CF722B35B49700A9F29B /* best_scores */ = {isa = PBXFileReference; lastKnownFileType = text; path = best_scores; sourceTree = "<group>"; };
+		F1C7CF732B36083100A9F29B /* Character_choose.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Character_choose.cpp; sourceTree = "<group>"; };
+		F1C7CF742B36083100A9F29B /* Character_choose.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Character_choose.hpp; sourceTree = "<group>"; };
 		F1F799A02AE736BB0015DA81 /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F799A32AE736BB0015DA81 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F1F799AB2AE736D80015DA81 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				F1C7CF6D2B35A57E00A9F29B /* High_scores.cpp */,
 				F1C7CF6E2B35A57E00A9F29B /* High_scores.hpp */,
 				F1C7CF722B35B49700A9F29B /* best_scores */,
+				F1C7CF732B36083100A9F29B /* Character_choose.cpp */,
+				F1C7CF742B36083100A9F29B /* Character_choose.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			files = (
 				F1C6A2312AEBBC0A006CED3A /* add_sound.cpp in Sources */,
 				F1C7CF6C2B359F4E00A9F29B /* Tutorial.cpp in Sources */,
+				F1C7CF752B36083100A9F29B /* Character_choose.cpp in Sources */,
 				F1F799BE2AE91AE90015DA81 /* death.cpp in Sources */,
 				F1C7CF592B34B4F600A9F29B /* menu.cpp in Sources */,
 				F1C7CF662B355C7100A9F29B /* variables.cpp in Sources */,

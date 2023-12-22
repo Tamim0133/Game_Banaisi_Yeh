@@ -63,6 +63,7 @@ private:
     int jumpstate;
     int new_frame_till_jump_complete;
     char text[10];
+    int character_no;
 
     
 

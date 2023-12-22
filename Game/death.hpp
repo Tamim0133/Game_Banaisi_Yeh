@@ -49,6 +49,7 @@ struct Death{
    
     bool play;
     char text[10];
+    int character_no;
     
     Window_Create w;
     Renderer_Create r;

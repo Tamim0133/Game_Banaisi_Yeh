@@ -76,6 +76,7 @@ High_scores::High_scores(){
     SDL_Texture* textTexture3 = SDL_CreateTextureFromSurface(ren, TTF_RenderText_Solid(font,text3.c_str(), textColor));
     SDL_Texture* textTexture4 = SDL_CreateTextureFromSurface(ren, TTF_RenderText_Solid(font,text4.c_str(), textColor));
     SDL_Texture* textTexture5 = SDL_CreateTextureFromSurface(ren, TTF_RenderText_Solid(font,text5.c_str(), textColor));
+    SDL_Texture* love_sent = t.Create_tex("Resources/menu/love_send.png", ren);
 
 
    
@@ -139,12 +140,86 @@ High_scores::High_scores(){
 
                         }
                     }
+                    if(SDL_HasIntersection(&btn1, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            Play_Music("assets/sounds/click.wav");
+                            SDL_RenderClear(ren);
+                            SDL_RenderCopy(ren, love_sent, NULL, NULL);
+                            SDL_RenderPresent(ren);
+                            SDL_Delay(2000);
+
+                        }
+
+                    }
+                    if(SDL_HasIntersection(&btn2, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            Play_Music("assets/sounds/click.wav");
+                            SDL_RenderClear(ren);
+                            SDL_RenderCopy(ren, love_sent, NULL, NULL);
+                            SDL_RenderPresent(ren);
+                            SDL_Delay(2000);
+
+                        }
+                    }
+                    if(SDL_HasIntersection(&btn3, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            Play_Music("assets/sounds/click.wav");
+                            SDL_RenderClear(ren);
+                            SDL_RenderCopy(ren, love_sent, NULL, NULL);
+                            SDL_RenderPresent(ren);
+                            SDL_Delay(2000);
+
+                        }
+                    }
+                    if(SDL_HasIntersection(&btn4, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            Play_Music("assets/sounds/click.wav");
+                            SDL_RenderClear(ren);
+                            SDL_RenderCopy(ren, love_sent, NULL, NULL);
+                            SDL_RenderPresent(ren);
+                            SDL_Delay(2000);
+
+                        }
+                    }
+                    if(SDL_HasIntersection(&btn5, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            Play_Music("assets/sounds/click.wav");
+                            SDL_RenderClear(ren);
+                            SDL_RenderCopy(ren, love_sent, NULL, NULL);
+                            SDL_RenderPresent(ren);
+                            SDL_Delay(2000);
+
+                        }
+                    }
                     
                     
                 
             }
          }
         
+        SDL_Rect face2 = {230, 155, 64, 64};
+        SDL_Rect textRect2 = {320, 175, texW, texH};
+        SDL_Rect btn2 = {360, 155, 96, 64};
+        
+        SDL_Rect face3 = {230, 220, 64, 64};
+        SDL_Rect textRect3 = {320, 240, texW, texH};
+        SDL_Rect btn3 = {360, 220, 96, 64};
+
+        SDL_Rect face4 = {230, 285, 64, 64};
+        SDL_Rect textRect4 = {320, 305, texW, texH};
+        SDL_Rect btn4 = {360, 285, 96, 64};
+
+        SDL_Rect face5 = {230, 350, 64, 64};
+        SDL_Rect textRect5 = {320, 370, texW, texH};
+        SDL_Rect btn5 = {360, 350, 96, 64};
+
+
+                
       
         if(SDL_HasIntersection(&close_btn, &m.point))
         {
@@ -152,7 +227,41 @@ High_scores::High_scores(){
         }
         else{
             close_btn = {550, 10, 64, 64};
-            
+        }
+        if(SDL_HasIntersection(&btn1, &m.point))
+        {
+            btn1 = {361, 91, 98, 66};
+        }
+        else{
+            btn1 = {360, 90, 96, 64};
+        }
+        if(SDL_HasIntersection(&btn2, &m.point))
+        {
+            btn2 = {361, 156, 98, 66};
+        }
+        else{
+            btn2 = {360, 155, 96, 64};
+        }
+        if(SDL_HasIntersection(&btn3, &m.point))
+        {
+            btn3 = {361, 221, 98, 66};
+        }
+        else{
+            btn3 = {360, 220, 96, 64};
+        }
+        if(SDL_HasIntersection(&btn4, &m.point))
+        {
+            btn4 = {361, 286, 98, 66};
+        }
+        else{
+            btn4 = {360, 285, 96, 64};
+        }
+        if(SDL_HasIntersection(&btn5, &m.point))
+        {
+            btn5 = {361, 351, 98, 66};
+        }
+        else{
+            btn5 = {360, 350, 96, 64};
         }
       
 

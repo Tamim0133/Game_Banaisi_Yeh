@@ -14,8 +14,8 @@
             filePath = "Game/game.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "Game :: Activate_ability()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,10 +30,117 @@
             filePath = "Game/game.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
+            startingLineNumber = "444"
+            endingLineNumber = "444"
             landmarkName = "Game :: Save_score(n)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "14B04DEA-D6D1-4C57-9185-54BE00F3F024 - 44e5686fc4ebb9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Game::Save_score(int)"
+                  moduleName = "Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamimdewan/Desktop/Game/Game/game.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "373"
+                  endingLineNumber = "373"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "14B04DEA-D6D1-4C57-9185-54BE00F3F024 - 44e5686fc4ebf7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Game::Save_score(int)"
+                  moduleName = "Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamimdewan/Desktop/Game/Game/game.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "405"
+                  endingLineNumber = "405"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "14B04DEA-D6D1-4C57-9185-54BE00F3F024 - 44e5686fc4ebf9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Game::Save_score(int)"
+                  moduleName = "Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamimdewan/Desktop/Game/Game/game.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "404"
+                  endingLineNumber = "404"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "14B04DEA-D6D1-4C57-9185-54BE00F3F024 - 44e5686fc4ec095"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Game::Save_score(int)"
+                  moduleName = "Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamimdewan/Desktop/Game/Game/game.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "427"
+                  endingLineNumber = "427"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "14B04DEA-D6D1-4C57-9185-54BE00F3F024 - 44e5686fc4ec243"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Game::Save_score(int)"
+                  moduleName = "Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamimdewan/Desktop/Game/Game/game.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "445"
+                  endingLineNumber = "445"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "14B04DEA-D6D1-4C57-9185-54BE00F3F024 - 44e5686fc4ec7f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Game::Save_score(int)"
+                  moduleName = "Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamimdewan/Desktop/Game/Game/game.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "463"
+                  endingLineNumber = "463"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "14B04DEA-D6D1-4C57-9185-54BE00F3F024 - 44e5686fc4ec222"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Game::Save_score(int)"
+                  moduleName = "Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tamimdewan/Desktop/Game/Game/game.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "446"
+                  endingLineNumber = "446"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

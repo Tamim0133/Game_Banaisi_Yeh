@@ -246,7 +246,8 @@ Menu :: Menu(){
     }
     SDL_DestroyWindow(menu_window);
     SDL_DestroyRenderer(menu_renderer);
-    Game g;
+//    Game g;
+    Character_choose c;
     
     Mix_HaltMusic();  // Stops Playing Music
     

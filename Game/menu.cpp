@@ -34,8 +34,6 @@ Menu :: Menu(){
     jump_fall_txt = t.Create_tex("sprite/jump/jump_fall.png", menu_renderer);
     
     if(game_has_opened) {
-//        Mix_Music *music = Mix_LoadMUS("assets/sounds/alto.wav"); // Load Music
-//        Mix_PlayMusic(music, -1); // -1 means Infinite porjonto cholbe
         game_has_opened = 0; // Ensuring Only once this happens
     }
     int FPS = 90;
@@ -55,96 +53,51 @@ Menu :: Menu(){
             switch (e.type)
             {
                 case SDL_QUIT: running = false; break;
-                    
-//                case SDL_KEYDOWN:
-//                    switch (e.key.keysym.sym) {
-//                        case SDLK_ESCAPE: {running = false;} break; // Escape Button
-//                        case SDLK_SPACE:  {running = false;} break; // Space Button
-//                        default: break;
-//                    }
-//
-//                case SDL_MOUSEMOTION :
-//                SDL_GetMouseState(&mouse_posx, &mouse_posy); break;
-//
-                case SDL_MOUSEBUTTONDOWN: // Detecting Mouse Click in a Particular Region
-//                    if((mouse_posx >= 220 and mouse_posx <= 220 + 160) and (mouse_posy >= 265 and mouse_posy <= 260 + 200))
+                 
+                case SDL_MOUSEBUTTONDOWN:
                     if(SDL_HasIntersection(&play_edge_rect, &m.point))
                     {
                         if(SDL_BUTTON_LEFT == e.button.button){
-                            
-//
-//                            // Fade-in loop
-//                                for (int alpha = 0; alpha <= 255; alpha++) {
-//                                    SDL_SetRenderDrawColor(menu_renderer, 0, 0, 0, 255); // Set background color
-//                                    SDL_RenderClear(menu_renderer);
-//
-//                                    // Set the alpha value
-//                                    SDL_SetTextureAlphaMod(yourTexture, alpha);
-//
-//                                    // Render the image
-//                                    SDL_RenderCopy(menu_renderer, yourTexture, NULL, NULL);
-//
-//                                    // Update the screen
-//                                    SDL_RenderPresent(menu_renderer);
-//
-//                                    // Add a delay or control the speed
-//                                    SDL_Delay(1000);
-//                                }
-//
-//                            SDL_DestroyTexture(yourTexture);
-                            
-                        
+                            if(music_on)
+                            Play_Music("assets/sounds/click.wav");
 
-//                            for (int alpha = 0; alpha <= 255; alpha++) {
-////                                SDL_RenderClear(menu_renderer);
-//                                SDL_RenderClear(menu_renderer);
-//
-//                                SDL_RenderCopy(menu_renderer, jungle_jump, NULL, &jungle_rect);  // Bg
-//                                SDL_RenderCopy(menu_renderer, table, NULL, &table_rect);  // Bg
-//                                SDL_RenderCopy(menu_renderer, right_edge, NULL, &play_edge_rect);  // Bg
-//                                SDL_RenderCopy(menu_renderer, play_now, NULL, &play_now_rect);  // Bg
-//
-//                                SDL_RenderCopy(menu_renderer, right_edge, NULL, &settings_edge_rect);  // Bgr
-//                                SDL_RenderCopy(menu_renderer, settings, NULL, &settings_rect);  // Bg
-//
-//                                SDL_RenderCopy(menu_renderer, right_edge, NULL, &credits_edge_rect);  // Bgr
-//                                SDL_RenderCopy(menu_renderer, credits, NULL, &credits_rect);  // Bg
-//
-//                                SDL_RenderCopy(menu_renderer, right_edge, NULL, &scores_edge_rect);  // Bgr
-//                                SDL_RenderCopy(menu_renderer, scores, NULL, &scores_rect);  // Bg
-//
-//                                SDL_RenderCopy(menu_renderer, right_edge, NULL, &how_play_edge_rect);  // Bgr
-//                                SDL_RenderCopy(menu_renderer, how_to_play, NULL, &how_to_play_rect);  // Bg
-//
-//                                SDL_RenderCopy(menu_renderer, jump_up_txt, NULL, &set_image_at_1);  // Bg
-//                                SDL_RenderCopy(menu_renderer, jump_fall_txt, NULL, &set_image_at_2);  // Bg
-//
-//
-//                        //        SDL_RenderCopy(front_renderer, play, NULL, &play_rect); // Play Btn
-//
-//                        //        int no_of_img2 = (SDL_GetTicks()/100 ) % 2;
-//                        //        SDL_RenderCopy(front_renderer, click_play[no_of_img2], NULL, &jungle_text_rect2); // Last er Text
-//                        //
-//                                SDL_RenderPresent(menu_renderer);
-//                                SDL_SetRenderDrawBlendMode(menu_renderer, SDL_BLENDMODE_BLEND);
-//                                SDL_SetRenderDrawColor(menu_renderer, 0, 0, 0, Uint8(alpha));
-//                                SDL_RenderFillRect(menu_renderer, &overlay);
-//                                SDL_RenderPresent(menu_renderer);
-//
-//                                SDL_Delay(10);
-//                                }
-
-                        
-                            
-                            
-
-                        
-
-                            
-                            
-                            
-                            
                             running = false; break;}
+                    }
+                    if(SDL_HasIntersection(&settings_edge_rect, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            if(music_on)
+                            Play_Music("assets/sounds/click.wav");
+//                            bool ok = music_on;
+                            s.play_settings();
+                           
+                        }
+                    }
+                    if(SDL_HasIntersection(&credits_edge_rect, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            if(music_on)
+                            Play_Music("assets/sounds/click.wav");
+                            Credits c;
+                            //                            bool ok = music_on;
+                        }
+                    }
+                    if(SDL_HasIntersection(&scores_edge_rect, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            if(music_on)
+                            Play_Music("assets/sounds/click.wav");
+                            High_scores h;
+                        }
+                    }
+                    if(SDL_HasIntersection(&how_play_edge_rect, &m.point))
+                    {
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            if(music_on)
+                            Play_Music("assets/sounds/click.wav");
+                            Tutorial t;
+                           
+                        }
                     }
 //
             }
@@ -170,6 +123,7 @@ Menu :: Menu(){
         
         if(SDL_HasIntersection(&settings_edge_rect, &m.point))
         {
+           
             settings_edge_rect = {174, 137, 234, 64};
             settings_rect = {179, 151, 172, 22};
 
@@ -218,7 +172,7 @@ Menu :: Menu(){
         
         SDL_RenderClear(menu_renderer);
         
-        SDL_RenderCopy(menu_renderer, jungle_jump, NULL, &jungle_rect);  // Bg
+        SDL_RenderCopy(menu_renderer, jungle_jump, NULL, &jungle_rect);  
         SDL_RenderCopy(menu_renderer, table, NULL, &table_rect);  // Bg
         SDL_RenderCopy(menu_renderer, right_edge, NULL, &play_edge_rect);  // Bg
         SDL_RenderCopy(menu_renderer, play_now, NULL, &play_now_rect);  // Bg
@@ -237,14 +191,7 @@ Menu :: Menu(){
         
         SDL_RenderCopy(menu_renderer, jump_up_txt, NULL, &set_image_at_1);  // Bg
         SDL_RenderCopy(menu_renderer, jump_fall_txt, NULL, &set_image_at_2);  // Bg
-//        SDL_RenderCopy(menu_renderer,t.Create_tex("Resources/menu/loading.png", menu_renderer), NULL, &jungle_rect);
 
-        
-//        SDL_RenderCopy(front_renderer, play, NULL, &play_rect); // Play Btn
-        
-//        int no_of_img2 = (SDL_GetTicks()/100 ) % 2;
-//        SDL_RenderCopy(front_renderer, click_play[no_of_img2], NULL, &jungle_text_rect2); // Last er Text
-//
         m.draw(menu_renderer);
         if(!running)
         {
@@ -279,6 +226,7 @@ Menu :: Menu(){
            
                    SDL_Delay(40);
                }
+            
             for(int i = 0; i <= 300; i+=10)
             {
                 SDL_RenderClear(menu_renderer);
@@ -326,41 +274,10 @@ void Menu :: initiate_textures(){
     scores = t.Create_tex("Resources/menu/scores.png", menu_renderer); // Bg Chobi
     how_to_play = t.Create_tex("Resources/menu/how_to_play.png", menu_renderer); // Bg Chobi
     
-    
-//    play = t.Create_tex("Resources/btn/play.png", front_renderer); // play btn
-    
-//    jungle_text[0] = t. Create_tex("assets/00003.png", front_renderer);
-//    jungle_text[1] = t. Create_tex("assets/00001.png", front_renderer);
-//    jungle_text[2] = t. Create_tex("assets/00004.png", front_renderer);
-//    jungle_text[3] = t. Create_tex("assets/0000.png", front_renderer);
-//    jungle_text[4] = t. Create_tex("assets/00002.png", front_renderer);
-
-//    click_play[0] = t. Create_tex("assets/click_play_0.png", front_renderer); // Likha Sada CHOBI
-//    click_play[1] = t. Create_tex("assets/click_play_1.png", front_renderer); // Calo Chobi
+   
 }
 #define FADE_SPEED 0.07f;
 Uint8 alpha;
 float alphaCalc;
-//
-//void Menu::fade(float elapsedTime)
-//{
-//    SDL_Texture* loading = t.Create_tex("Resources/menu/loading.png", menu_renderer);
-//    // Check there is a texture
-//    if (loading) {
-//        // Set the alpha of the texture
-//        SDL_SetTextureAlphaMod(loading, alpha);
-//    }
-//
-//    // Update the alpha value
-//    if (alpha < SDL_ALPHA_OPAQUE) {
-//        alphaCalc += FADE_SPEED * (float)elapsedTime;
-//        alpha = alphaCalc;
-//    }
-//
-//    // if alpha is above 255 clamp it
-//    if (alpha >= SDL_ALPHA_OPAQUE) {
-//        alpha = SDL_ALPHA_OPAQUE;
-//        alphaCalc = (float)SDL_ALPHA_OPAQUE;
-//    }
-//}
+
 

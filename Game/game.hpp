@@ -12,6 +12,9 @@
 #include <SDL2_image/SDL_image.h>
 #include <SDL2_ttf/SDL_ttf.h>
 #include <SDL2_mixer/SDL_mixer.h>
+#include <vector>
+#include <fstream>
+#include <stdlib.h>
 #include <iostream>
 #include "death.hpp"
 #include "Sound.hpp"
@@ -19,6 +22,7 @@
 #include "Window_Create.hpp"
 #include "Renderer_Create.hpp"
 #include "Texture_Create.hpp"
+#include "variables.hpp"
 using namespace std;
 
 
@@ -34,6 +38,7 @@ public:
     void Show_point();
     void Show_jump();
     void Show_fall();
+    void Save_score(int n);
     
 private:
     Death d;

@@ -6,10 +6,14 @@
 //
 
 #include "Play_Music.hpp"
-
+#include "variables.hpp"
 
 Play_Music::Play_Music(string location){
-    Mix_Chunk * sound = Mix_LoadWAV(location.c_str());
-    Mix_PlayChannel( -1, sound, 0 );
+    if(music_on)
+    {
+    
+        Mix_Chunk * sound = Mix_LoadWAV(location.c_str());
+        Mix_PlayChannel( -1, sound, 0 );
+    }
     
 }

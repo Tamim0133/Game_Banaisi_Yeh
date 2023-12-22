@@ -15,7 +15,11 @@
 #include "Texture_Create.hpp"
 #include "Play_Music.hpp"
 #include "mouse.hpp"
-
+#include "Settings.hpp"
+#include "variables.hpp"
+#include "Credits.hpp"
+#include "Tutorial.hpp"
+#include "High_scores.hpp"
 struct Menu{
     
 public:
@@ -31,6 +35,7 @@ private:
     Window_Create w;
     Renderer_Create r;
     Texture_Create t;
+    Settings_tab s;
     
     
     int mouse_posx = 0 , mouse_posy = 0;

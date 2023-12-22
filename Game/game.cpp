@@ -61,9 +61,13 @@ Game:: Game(){
                               case SDLK_RIGHT: set_image_at.x+= 10; break;
                               case SDLK_d: set_image_at.x+= 10; break;
                                   
-                              case SDLK_UP: { Play_Music("assets/sounds/smb_kick.wav"); jumpstate = 1;} break;
-                              case SDLK_SPACE:{ Play_Music("assets/sounds/smb_kick.wav"); jumpstate = 1; } break;
-                              case SDLK_w: { Play_Music("assets/sounds/smb_kick.wav"); jumpstate = 1; } break;
+                              case SDLK_UP: {
+                                 Play_Music("assets/sounds/smb_kick.wav");
+                                  jumpstate = 1;} break;
+                              case SDLK_SPACE:{
+Play_Music("assets/sounds/smb_kick.wav"); jumpstate = 1; } break;
+                              case SDLK_w: {
+Play_Music("assets/sounds/smb_kick.wav"); jumpstate = 1; } break;
                                   
                           } break;
               }
@@ -103,11 +107,13 @@ Game:: Game(){
           Detect_collision();
          
           
-          if(game_has_just_began){ Play_Music("assets/sounds/game_start.wav");game_has_just_began = false;}
+          if(game_has_just_began){                             
+Play_Music("assets/sounds/game_start.wav");game_has_just_began = false;}
             
           Render_Coins();
           
           no_of_image = (Framestart / 100) % 6;
+          
           if(jumpstate == 0)SDL_RenderCopy(renderer, running[no_of_image], NULL, &set_image_at);
           
           SDL_RenderCopy(renderer, rock_mons_tex, NULL , &rock_monster_01);
@@ -266,15 +272,27 @@ void Game:: Detect_collision(){
     
     
     if(collision_hero_enemy_01 or collision_hero_enemy_03 or collision_with_rock_monster)
-    {Play_Music("assets/sounds/smb_gameover.wav");
-        d.present_window(text);quit = true;}
+        
+    {
+        Play_Music("assets/sounds/smb_gameover.wav");
+        d.present_window(text);quit = true;
+        Save_score(point_count);
 
-    if(collision_with_coin_01) { Play_Music("assets/sounds/smb_coin.wav"); coin_01.x = - 100; point_count++; }
-    if(collision_with_coin_02) { Play_Music("assets/sounds/smb_coin.wav"); coin_02.x = -200; point_count++; }
-    if(collision_with_coin_03) { Play_Music("assets/sounds/smb_coin.wav"); coin_03.x = -100; point_count++;}
-    if(collision_with_coin_04) { Play_Music("assets/sounds/smb_coin.wav"); coin_04.x = - 100; point_count++;}
-    if(collision_with_coin_05) { Play_Music("assets/sounds/smb_coin.wav"); coin_05.x = -200; point_count++;}
-    if(collision_with_coin_06) { Play_Music("assets/sounds/smb_coin.wav"); coin_06.x = -100; point_count++;}
+        
+    }
+
+    if(collision_with_coin_01) {
+Play_Music("assets/sounds/smb_coin.wav"); coin_01.x = - 100; point_count++; }
+    if(collision_with_coin_02) {
+Play_Music("assets/sounds/smb_coin.wav"); coin_02.x = -200; point_count++; }
+    if(collision_with_coin_03) {
+Play_Music("assets/sounds/smb_coin.wav"); coin_03.x = -100; point_count++;}
+    if(collision_with_coin_04) {
+Play_Music("assets/sounds/smb_coin.wav"); coin_04.x = - 100; point_count++;}
+    if(collision_with_coin_05) {
+Play_Music("assets/sounds/smb_coin.wav"); coin_05.x = -200; point_count++;}
+    if(collision_with_coin_06) {
+Play_Music("assets/sounds/smb_coin.wav"); coin_06.x = -100; point_count++;}
     
     if(collision_hero_mana_potion){
         Play_Music("assets/sounds/smb_powerup.wav");
@@ -344,4 +362,71 @@ void Game :: Show_fall(){
     
     if(set_image_at.y >= 296)
     { set_image_at.y= 296;jumpstate = 0;}
+}
+
+void Game :: Save_score(int n)
+{
+    cout << "Points : " << n << endl << endl;
+    std::ifstream inputFile("Game/best_scores.txt");
+
+        // Check if the file is open
+        if (!inputFile.is_open()) {
+            std::cerr << "Error opening file\n";
+//            return 1; // Exit with an error code
+        }
+
+        // Declare a vector to store integers
+        std::vector<int> v;
+
+        // Read 5 integers from the file and store them in the vector
+        int number;
+        for (int i = 0; i < 5; ++i) {
+            if (inputFile >> number) {
+                v.push_back(number);
+            } else {
+                std::cerr << "Error reading integer from file\n";
+                inputFile.close();
+//                return 1; // Exit with an error code
+            }
+        }
+
+        // Close the file
+        inputFile.close();
+
+        // Print the integers stored in the vector
+        std::cout << "Integers read from file and stored in vector:\n";
+        for (const auto& value : v) {
+            std::cout << value << "\n";
+        }
+    
+    
+    v[5] = n;
+    int temp = 5;
+    for(int i = 0; i < 5; i++){
+        if(v[i] < n){
+            temp = i;
+            break;
+        }
+    }
+
+    for(int i = 5; i >temp; i--)
+    {
+        v[i] = v[i-1];
+    }
+
+    v[temp] = n;
+
+    ofstream outputFile("Game/best_scores.txt");
+
+    for (const auto& value : v) {
+            outputFile << value << " ";
+        }
+
+        // Close the file
+        outputFile.close();
+
+
+//    fclose(file);
+
+    
 }

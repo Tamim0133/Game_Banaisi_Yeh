@@ -59,7 +59,9 @@ FrontPage :: FrontPage(){
                     
                 case SDL_MOUSEBUTTONDOWN: // Detecting Mouse Click in a Particular Region
                     if((mouse_posx >= 220 and mouse_posx <= 220 + 160) and (mouse_posy >= 265 and mouse_posy <= 260 + 200)){
-                        if(SDL_BUTTON_LEFT == e.button.button){running = false; break;}
+                        if(SDL_BUTTON_LEFT == e.button.button){
+                            Play_Music("assets/sounds/click.wav");
+                            running = false; break;}
                     }
                     
             }

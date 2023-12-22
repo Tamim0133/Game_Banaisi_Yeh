@@ -23,14 +23,17 @@ FrontPage :: FrontPage(){
     SDL_ShowWindow(front_window);
     SDL_RaiseWindow(front_window);
     
+    Mouse m(front_renderer);
+    
     if(game_has_opened) {
-        Mix_Music *music = Mix_LoadMUS("assets/sounds/alto.wav"); // Load Music
-        Mix_PlayMusic(music, -1); // -1 means Infinite porjonto cholbe
+//        Mix_Music *music = Mix_LoadMUS("assets/sounds/alto.wav"); // Load Music
+//        Mix_PlayMusic(music, -1); // -1 means Infinite porjonto cholbe
         game_has_opened = 0; // Ensuring Only once this happens 
     }
     
     while(running)
     {
+        m.update();
         while (SDL_PollEvent(&e))
         {
             if(e.type == SDL_WINDOWEVENT
@@ -58,11 +61,23 @@ FrontPage :: FrontPage(){
                     if((mouse_posx >= 220 and mouse_posx <= 220 + 160) and (mouse_posy >= 265 and mouse_posy <= 260 + 200)){
                         if(SDL_BUTTON_LEFT == e.button.button){running = false; break;}
                     }
+                    
             }
             
          }
     
-        
+        if(SDL_HasIntersection(&play_rect, &m.point))
+        {
+            play_rect = {235 , 260 , 170, 210};
+        }
+        else{
+            play_rect = {240 , 265 , 160, 200};
+
+        }
+        if(!running)
+        {
+            // chotto ekta music bajai dibo
+        }
         SDL_RenderClear(front_renderer);
         
         SDL_RenderCopy(front_renderer, jungle_jump, NULL, &jungle_rect);  // Bg
@@ -71,7 +86,7 @@ FrontPage :: FrontPage(){
         int no_of_img2 = (SDL_GetTicks()/100 ) % 2;
         SDL_RenderCopy(front_renderer, click_play[no_of_img2], NULL, &jungle_text_rect2); // Last er Text
         
-
+        m.draw(front_renderer);
         SDL_RenderPresent(front_renderer);
     }
     

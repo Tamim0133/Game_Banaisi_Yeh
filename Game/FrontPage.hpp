@@ -14,6 +14,7 @@
 #include "Renderer_Create.hpp"
 #include "Texture_Create.hpp"
 #include "Play_Music.hpp"
+#include "mouse.hpp"
 
 struct FrontPage{
     
@@ -29,6 +30,7 @@ private:
     Window_Create w;
     Renderer_Create r;
     Texture_Create t;
+    
     
     int mouse_posx = 0 , mouse_posy = 0;
     

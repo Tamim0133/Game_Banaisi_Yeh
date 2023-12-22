@@ -73,6 +73,22 @@ Game:: Game(){
           SDL_RenderClear(renderer);//Clear the current rendering
           
           Move_everything();
+          if(game_has_just_began){
+              for (int alpha = 255; alpha >= 0; alpha-=10) {
+                  SDL_RenderPresent(renderer);
+                  SDL_RenderCopy(renderer, mountains, NULL, &mountain1); // Bg Image
+                  SDL_RenderCopy(renderer, mountains, NULL, &mountain2);
+                  SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+                  
+                  SDL_SetRenderDrawColor(renderer, 0, 0, 0, alpha);
+                  
+                  SDL_RenderFillRect(renderer, &mountain1);
+                  
+             
+             
+                     SDL_Delay(30);
+                 }
+          }
           
           SDL_RenderCopy(renderer, mountains, NULL, &mountain1); // Bg Image
           SDL_RenderCopy(renderer, mountains, NULL, &mountain2);
@@ -85,6 +101,7 @@ Game:: Game(){
           if(jumpstate == 2) {Show_fall();}
           
           Detect_collision();
+         
           
           if(game_has_just_began){ Play_Music("assets/sounds/game_start.wav");game_has_just_began = false;}
             

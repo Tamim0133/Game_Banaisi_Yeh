@@ -2,7 +2,7 @@
 //  Settings.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 22/12/23.
+//  Created by  on 22/12/23.
 //
 
 #ifndef Settings_hpp

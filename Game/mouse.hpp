@@ -2,7 +2,7 @@
 //  mouse.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 21/12/23.
+//  Created on 21/12/23.
 //
 
 #ifndef mouse_hpp

@@ -2,7 +2,7 @@
 //  High_scores.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 22/12/23.
+//  Created by on 22/12/23.
 //
 
 #ifndef High_scores_hpp

@@ -1,12 +1,13 @@
 //
-//  game.hpp
+//  game_2.hpp
 //  Game
 //
-//  Created by  on 10/11/23.
+//  Created by  on 23/12/23.
 //
 
-#ifndef game_hpp
-#define game_hpp
+#ifndef game_2_hpp
+#define game_2_hpp
+
 
 #include <SDL2/SDL.h>
 #include <SDL2_image/SDL_image.h>
@@ -22,12 +23,13 @@
 #include "Renderer_Create.hpp"
 #include "Texture_Create.hpp"
 #include "variables.hpp"
-
+#include "FrontPage.hpp"
 using namespace std;
 
-struct Game {
+
+struct Game2 {
 public:
-    Game();
+    Game2();
     void Init();
     void Render_Coins();
     void Create_game_textures();
@@ -40,6 +42,7 @@ public:
     void Save_score(int n);
     
 private:
+//    Death d;
     Window_Create w;
     Renderer_Create r;
     Texture_Create t;
@@ -97,10 +100,35 @@ private:
     
     SDL_Rect mountain1 = {0, 0 , 640, 480};
     SDL_Rect mountain2 = {640, 0 , 640, 480};
+    SDL_Rect ground1 = {0, 50 , 640, 480};
+    SDL_Rect ground2 = {640, 50 , 640, 480};
+    SDL_Rect tree1 = {0, 60 , 640, 480};
+    SDL_Rect tree2 = {640, 60 , 640, 480};
+    SDL_Rect distant_tree1 = {0, 30 , 640, 480};
+    SDL_Rect distant_tree2 = {640, 30 , 640, 480};
+    SDL_Rect bushes1 = {0, 50 , 640, 480};
+    SDL_Rect bushes2 = {640, 50 , 640, 480};
+    SDL_Rect hill11 = {0, 0 , 640, 480};
+    SDL_Rect hill12 = {640, 0 , 640, 480};
+    SDL_Rect hill21 = {0, -50 , 640, 480};
+    SDL_Rect hill22 = {640, -50 , 640, 480};
+    SDL_Rect cloud_rect = {0, -50 , 640, 480};
+    SDL_Rect cloud_rect_opo = {640, -050 , 640, 480};
+    
+    SDL_Rect cloud_rect_11 = {0, 0 , 640, 480};
+    SDL_Rect cloud_rect_12 = {640, 0 , 640, 480};
+    
+    SDL_Rect cloud_rect_21 = {0, 0 , 640, 480};
+    SDL_Rect cloud_rect_22 = {640,0 , 640, 480};
+    
+    SDL_Rect cloud_rect_31 = {0, 0 , 640, 480};
+    SDL_Rect cloud_rect_32 = {640, 0 , 640, 480};
+    
     
     SDL_Rect rock_monster_01 = {1280 + (rand() % 300) , 360, 64, 64};
+    SDL_Rect red_rect_src = {0,0, 92,112};
+    SDL_Rect red_rect_dst = {300, 300 , 150, 150};
     SDL_Rect super_jump_rect = {150,30,300,200};
-
 
 
     SDL_Texture* coin[8];
@@ -108,14 +136,29 @@ private:
     SDL_Texture * rock_mons_tex;
     SDL_Texture * mana_txt;
     SDL_Texture* ssj_txt;
-    SDL_Texture* mountains;
     SDL_Texture* running[6];
     SDL_Texture* jump_up[2];
     SDL_Texture * jumo_fall_txt;
     SDL_Texture* enemy[2];
     SDL_Texture* enemy2[2];
+    SDL_Texture* enemy3[8];
     SDL_Texture* super_jump;
 
-};
+    
+    SDL_Texture* mountains;
+    SDL_Texture* bg;
+    SDL_Texture* ground;
+    SDL_Texture* tree;
+    SDL_Texture* distant_tree;
+    SDL_Texture* bushes;
+    SDL_Texture* hill1;
+    SDL_Texture* hill2;
+    SDL_Texture* cloud;
+    SDL_Texture* cloud_1;
+    SDL_Texture* cloud_2;
+    SDL_Texture* cloud_3;
 
-#endif /* game_hpp */
+    
+
+};
+#endif /* game_2_hpp */

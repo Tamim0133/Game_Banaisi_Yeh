@@ -2,7 +2,7 @@
 //  Settings.cpp
 //  Game
 //
-//  Created by Tamim Dewan on 22/12/23.
+//  Created by  on 22/12/23.
 //
 
 #include "Settings.hpp"
@@ -14,7 +14,7 @@ void Settings_tab::play_settings(){
     SDL_Init(SDL_INIT_VIDEO);
     playing = true;
 
-    SDL_Window* settings_win = w.create_window("Settings", 380, 360);
+    SDL_Window* settings_win = w.create_window("Settings", 640, 480);
     SDL_Renderer* settings_ren = r.Create_Renderer(settings_win);
 
 
@@ -33,16 +33,16 @@ void Settings_tab::play_settings(){
     
 
 
-    SDL_Rect bg_rect = {2,2,380,360};
-    SDL_Rect headline_rect = {100, 50, 180,80};
-    SDL_Rect table_rect = {20,20, 320,300};
-    SDL_Rect sound_rect = {40, 130, 150, 100};
-    SDL_Rect sound_btn = {180, 150, 94, 64};
-    SDL_Rect close_btn = {320, 0, 64, 64};
+    SDL_Rect bg_rect = {112,52,380,360};
+    SDL_Rect headline_rect = {210, 100, 180,80};
+    SDL_Rect table_rect = {125,70, 350,300};
+    SDL_Rect sound_rect = {130, 180, 150, 100};
+    SDL_Rect sound_btn = {290, 200, 94, 64};
+    SDL_Rect close_btn = {410, 5, 64, 64};
     
-    SDL_Rect Volume_bar = {80, 250, 180,30};
-    SDL_Rect Volume_up = {270, 250, 32,32};
-    SDL_Rect Volume_down = {40, 250, 32,32};
+    SDL_Rect Volume_bar = {190, 300, 180,30};
+    SDL_Rect Volume_up = {380, 300, 32,32};
+    SDL_Rect Volume_down = {150, 300, 32,32};
 
     
 
@@ -52,7 +52,8 @@ void Settings_tab::play_settings(){
 
     SDL_ShowWindow(settings_win);
     SDL_RaiseWindow(settings_win);
-
+    SDL_SetRenderDrawColor(settings_ren, 255, 99, 71, 0.5);
+    
 
     while(playing)
     {
@@ -70,6 +71,10 @@ void Settings_tab::play_settings(){
             {
                 case SDL_QUIT: playing = false; break;
                 case SDL_MOUSEBUTTONDOWN:
+                    
+                    //  Sound Btn Clicking
+                    // -----------------------------------------------
+                    
                     if(SDL_HasIntersection(&sound_btn, &m.point))
                     {
                         if(SDL_BUTTON_LEFT == e.button.button){
@@ -77,15 +82,22 @@ void Settings_tab::play_settings(){
                             Play_Music("assets/sounds/click.wav");
                             if(music_on){
                                 music_on = false;
+                                Mix_HaltMusic();
                                 on = t.Create_tex("Resources/settings/95.png", settings_ren);
                             }
                             else{
                                 music_on = true;
+                                Mix_Music *music = Mix_LoadMUS("assets/sounds/alto.wav"); // Load Music
+                                Mix_PlayMusic(music, -1);//
                                 on = t.Create_tex("Resources/settings/96.png", settings_ren);
                             }
 
                         }
                     }
+                    
+                    //  Close Btn Clicking
+                    // -----------------------------------------------
+                    
                     if(SDL_HasIntersection(&close_btn, &m.point))
                     {
                         if(SDL_BUTTON_LEFT == e.button.button){
@@ -96,6 +108,10 @@ void Settings_tab::play_settings(){
 
                         }
                     }
+                    
+                    
+                    //  Vol Up Btn Clicking
+                    // -----------------------------------------------
                     if(SDL_HasIntersection(&Volume_up, &m.point))
                     {
                         if(SDL_BUTTON_LEFT == e.button.button){
@@ -107,6 +123,9 @@ void Settings_tab::play_settings(){
 
                         }
                     }
+                    
+                    //  Vol Down Btn Clicking
+                    // -----------------------------------------------
                     if(SDL_HasIntersection(&Volume_down, &m.point))
                     {
                         if(SDL_BUTTON_LEFT == e.button.button){
@@ -128,36 +147,45 @@ void Settings_tab::play_settings(){
             }
          }
         
+        /*--------------------------------------------------------
+                        Checking Interaction
+         --------------------------------------------------------*/
+        
         if(SDL_HasIntersection(&sound_btn, &m.point))
         {
-            sound_btn = {181, 151, 96, 66};
+            sound_btn = {292, 202, 96, 66};
         }
         else{
-            sound_btn = {180, 150, 94, 64};
+            sound_btn = {290, 200, 94, 64};
         }
         if(SDL_HasIntersection(&close_btn, &m.point))
         {
-            close_btn = {318, 2, 66, 66};
+            close_btn = {432, 52, 66, 66};
         }
         else{
-            close_btn = {320, 0, 64, 64};
+            close_btn = {430, 50, 64, 64};
             
         }
         if(SDL_HasIntersection(&Volume_up, &m.point))
         {
-            Volume_up = {272, 248, 34,34};
+            Volume_up = {382, 302, 34,34};
         }
         else{
-            Volume_up = {270, 250, 32,32};
+            Volume_up = {380, 300, 32,32};
         }
         if(SDL_HasIntersection(&Volume_down, &m.point))
         {
-            Volume_down = {42, 252, 34,34};
+            Volume_down = {152, 302, 34,34};
         }
         else{
-            Volume_down = {40, 250, 32,32};
+            Volume_down = {150, 300, 32,32};
         }
-
+        
+        
+        /*-------------------------------------------------
+                        Render Start
+        -------------------------------------------------*/
+        
         SDL_RenderClear(settings_ren);
 
         SDL_RenderCopy(settings_ren, bg, NULL, &bg_rect);
@@ -183,6 +211,10 @@ void Settings_tab::play_settings(){
         m.draw(settings_ren);
 
         SDL_RenderPresent(settings_ren);
+        
+        /*-------------------------------------------------
+                        Render Ends
+        -------------------------------------------------*/
     }
 
 

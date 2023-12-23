@@ -2,7 +2,7 @@
 //  FrontPage.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 13/11/23.
+//  Created by on 13/11/23.
 //
 
 #ifndef FrontPage_hpp
@@ -15,6 +15,7 @@
 #include "Texture_Create.hpp"
 #include "Play_Music.hpp"
 #include "mouse.hpp"
+#include "menu.hpp"
 
 struct FrontPage{
     
@@ -26,6 +27,7 @@ public:
 private:
     bool running;
     bool game_has_opened;
+    
     SDL_Event e;
     Window_Create w;
     Renderer_Create r;
@@ -36,11 +38,16 @@ private:
     
     SDL_Window * front_window;
     SDL_Renderer * front_renderer;
+    
+    //Textures
+    //---------------------------
     SDL_Texture * jungle_jump;
     SDL_Texture * play;
     SDL_Texture * jungle_text[5];
     SDL_Texture * click_play[2];
     
+    // Rectangles
+    //--------------------------------------------
     SDL_Rect jungle_rect = {0 , 0 , 640, 480};
     SDL_Rect play_rect = {240 , 265 , 160, 200};
     SDL_Rect jungle_text_rect = {120, 75, 400, 150};

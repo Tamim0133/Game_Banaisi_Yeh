@@ -2,14 +2,19 @@
 //  variables.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 22/12/23.
+//  Created by  on 22/12/23.
 //
 
 #ifndef variables_hpp
 #define variables_hpp
 
 #include <stdio.h>
+
+// Global Variables
+//----------------------------
 extern bool music_on;
+extern int char_no;
+extern int location_no;
 
 
 

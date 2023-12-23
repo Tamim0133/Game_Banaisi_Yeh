@@ -2,7 +2,7 @@
 //  menu.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 22/12/23.
+//  Created by on 22/12/23.
 //
 
 #ifndef menu_hpp
@@ -21,6 +21,7 @@
 #include "Tutorial.hpp"
 #include "High_scores.hpp"
 #include "Character_choose.hpp"
+
 struct Menu{
     
 public:
@@ -38,7 +39,6 @@ private:
     Texture_Create t;
     Settings_tab s;
     
-    
     int mouse_posx = 0 , mouse_posy = 0;
     
     SDL_Window * menu_window;
@@ -52,9 +52,6 @@ private:
     SDL_Texture * scores;
     SDL_Texture * how_to_play;
     
-  
-
-
     SDL_Texture * play;
     SDL_Texture * jungle_text[5];
     SDL_Texture * click_play[2];
@@ -71,7 +68,6 @@ private:
     SDL_Rect set_image_at_2 = {74,-20, 96,192};
     SDL_Rect overlay = {0,0, 640, 480};
 
-
     SDL_Rect credits_edge_rect = {175, 183, 230, 60};
     SDL_Rect credits_rect = {185, 200, 150, 18};
     SDL_Rect scores_edge_rect = {175, 228, 230, 60};
@@ -79,14 +75,10 @@ private:
     SDL_Rect how_play_edge_rect = {175, 273, 230, 60};
     SDL_Rect how_to_play_rect = {185, 290, 225, 18};
 
-
-
-
-
-    
     SDL_Rect play_rect = {240 , 265 , 160, 200};
     SDL_Rect jungle_text_rect = {120, 75, 400, 150};
     SDL_Rect jungle_text_rect2 = {120, 460, 400, 20};
     
 };
+
 #endif /* menu_hpp */

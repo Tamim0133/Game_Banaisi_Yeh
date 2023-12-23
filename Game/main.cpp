@@ -10,10 +10,5 @@ using namespace std;
 int main(int argc, char **argv)
 {
     FrontPage f;
-    
-    Menu m;
-    
-//    Game g;
-
     return 0;
 }

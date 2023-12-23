@@ -1,12 +1,12 @@
 //
-//  Character_choose.hpp
+//  Loacation_choose.hpp
 //  Game
 //
-//  Created by on 23/12/23.
+//  Created by Tamim Dewan on 23/12/23.
 //
 
-#ifndef Character_choose_hpp
-#define Character_choose_hpp
+#ifndef Loacation_choose_hpp
+#define Loacation_choose_hpp
 
 
 #include <SDL2/SDL.h>
@@ -26,17 +26,22 @@
 #include "game.hpp"
 #include "game_2.hpp"
 
-#include "Loacation_choose.hpp"
+
 using namespace std;
 
-struct Character_choose{
+struct Location_choose{
 private:
     bool playing;
     Window_Create w;
     Renderer_Create r;
     Texture_Create t;
     
-    SDL_Texture* image[2];
+    SDL_Texture* location_01;
+    SDL_Texture* location_02;
+    
+    
+    
+
     
     Uint32 Framestart;
     int FrameTime;
@@ -45,7 +50,7 @@ private:
 
     
 public:
-    Character_choose();
+    Location_choose();
 
 };
-#endif /* Character_choose_hpp */
+#endif /* Loacation_choose_hpp */

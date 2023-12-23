@@ -2,7 +2,7 @@
 //  Texture_Create.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 10/11/23.
+//  Created by on 10/11/23.
 //
 
 #ifndef Texture_Create_hpp

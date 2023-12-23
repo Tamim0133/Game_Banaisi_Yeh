@@ -2,7 +2,7 @@
 //  death.hpp
 //  Game
 //
-//  Created by Tamim Dewan on 25/10/23.
+//  Created by  on 25/10/23.
 //
 
 #ifndef death_hpp
@@ -13,12 +13,14 @@
 #include <SDL2_ttf/SDL_ttf.h>
 #include <SDL2_mixer/SDL_mixer.h>
 #include <iostream>
-#include "death.hpp"
-#include "Sound.hpp"
 #include "Play_Music.hpp"
 #include "Window_Create.hpp"
 #include "Renderer_Create.hpp"
 #include "Texture_Create.hpp"
+#include "mouse.hpp"
+#include "menu.hpp"
+#include "FrontPage.hpp"
+
 using namespace std;
 
 struct Death{
@@ -42,7 +44,9 @@ struct Death{
     SDL_Texture* background;
     
     SDL_Texture * fontTexture;
+    SDL_Texture * menu_back;
     
+
     
     TTF_Font * font ;
     SDL_Color color ;
@@ -54,6 +58,7 @@ struct Death{
     Window_Create w;
     Renderer_Create r;
     Texture_Create t;
+    
     
   
 };

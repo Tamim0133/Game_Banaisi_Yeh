@@ -82,7 +82,9 @@ FrontPage ::FrontPage()
                 }
             }
         }
-
+        
+        //  Check Intersection
+        //-----------------------------------------------
         if (SDL_HasIntersection(&play_rect, &m.point))
         {
             play_rect = {235, 260, 170, 210};
@@ -91,13 +93,19 @@ FrontPage ::FrontPage()
         {
             play_rect = {240, 265, 160, 200};
         }
-
+        
+        //  Rendering
+        //-----------------------------------------------
+        
         SDL_RenderClear(front_renderer);
 
         SDL_RenderCopy(front_renderer, jungle_jump, NULL, &jungle_rect); // Bg
         SDL_RenderCopy(front_renderer, play, NULL, &play_rect);          // Play Btn
 
-        int no_of_img2 = (SDL_GetTicks() / 100) % 2;
+        int no_of_img2 = (SDL_GetTicks()/100) % 2;
+        
+        cout << SDL_GetTicks() << endl;
+        
         SDL_RenderCopy(front_renderer, click_play[no_of_img2], NULL, &jungle_text_rect2); // Last er Text
 
         m.draw(front_renderer); // Mouse
@@ -105,6 +113,7 @@ FrontPage ::FrontPage()
     }
     Menu n;
 };
+
 
 // Initialize
 // ------------------------------------------------------------
@@ -118,6 +127,7 @@ void FrontPage::FrontPage_init()
     IMG_Init(IMG_INIT_PNG);
     SDL_Init(SDL_INIT_AUDIO);
 }
+
 
 // Texture
 // ------------------------------------------------------------
